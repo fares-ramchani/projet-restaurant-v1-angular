@@ -1,0 +1,93 @@
+<div id="container">
+    <div mat-dialog-actions style="width: 100%;display: flex;justify-content: end; margin-top: 1%;;">
+        <button mat-raised-buttom class="btn btn-close" (click)="closepopup()"></button>
+
+    </div>
+    <div class="h1">
+        <h1 style="text-align: center; margin-top:-4%; font-weight: bold; ">cart items</h1>
+    </div>
+
+    <div
+        class="cartcontunu">
+        <div class="card shadow"   *ngFor="let inputDat of inputData"
+            style="display: flex; flex-direction: column; width: 87%; justify-content: space-around;align-items: center; margin-top: 8%; ">
+            <div style="width: 87%; ">
+                <div style="width: 100%; display: flex; justify-content: end; margin-top: 2%; margin-left: 5%;">
+                    <div class="btn btn-secondary " style="background-color:rgba(128, 128, 128, 0.715); border: 0;" (click)="DeleteCart(inputDat.produit.name)" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                          </svg>
+                    </div>
+                </div>
+              
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <img [src]="inputDat.produit.Image" alt="" style="width: 130px; height: 100px; border-radius: 50%;">
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                    <h4 style="font-size: 20px; font-weight: bold;">{{inputDat.produit.name}}</h4>
+                    <h4>{{inputDat.produit.montant}}</h4>
+                </div>
+
+                <h6 style="font-weight:lighter; color: rgba(113, 113, 112, 0.615);">{{inputDat.produit.description}}
+                </h6>
+                <div *ngIf="inputDat.Sauce.length>0">
+                    <h4 style="font-size: 16px; font-weight: bold;">Sauces</h4>
+                    <div *ngFor="let sauce of inputDat.Sauce ">
+                        <h6 style="font-weight:lighter; color: rgba(113, 113, 112, 0.615);">{{sauce}}</h6>
+                    </div>
+                </div>
+                <div *ngIf="inputDat.Crudites.length>0">
+                    <h4 style="font-size: 16px; font-weight: bold;">Crudités</h4>
+                    <div *ngFor="let Crudites of inputDat.Crudites ">
+                        <h6 style="font-weight:lighter; color: rgba(113, 113, 112, 0.615);">{{Crudites}}</h6>
+                    </div>
+                </div>
+                <div *ngIf="inputDat.Supplements.length>0">
+                    <h4 style="font-size: 16px; font-weight: bold;">Suppléments</h4>
+                    <div *ngFor="let Supplements of inputDat.Supplements ">
+                        <h6 style="font-weight:lighter; color: rgba(113, 113, 112, 0.615);">{{Supplements}}</h6>
+                    </div>
+                </div>
+                <div *ngIf="inputDat.Dessert.length>0">
+                    <h4 style="font-size: 16px; font-weight: bold;">Dessert</h4>
+                    <div *ngFor="let Dessert of inputDat.Dessert ">
+                        <h6 style="font-weight:lighter; color: rgba(113, 113, 112, 0.615);">{{Dessert}}</h6>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <h3 style="max-width: 180px;">Total: {{inputDat.montantTotal| number: '1.1-2'}} </h3>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="btn"  (click)="moinQuantiter(inputDat)" style="color: orange;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z" />
+                            </svg>
+                        </div>
+                        <input type="text" [placeholder]="inputDat.Quantity"
+                            style="width: 50px;text-align: center; border: 0;">
+                        <div class="btn" (click)="plusQuantiter(inputDat)" style="color: orange;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 5%;">
+        <button id="button" class="btn btn-danger">
+            <h5 style="font-weight: bold;">{{montantTotal | number: '1.1-2'}}confermer</h5>
+        </button>
+    </div>
+</div>

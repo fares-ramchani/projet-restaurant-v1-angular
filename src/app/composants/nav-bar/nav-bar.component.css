@@ -1,0 +1,252 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+
+/* ===== Colours ===== */
+:root{
+    --body-color: #E4E9F7;
+    --nav-color: #4070F4;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+background-color: #fffffff0;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body.dark nav{
+    border: 1px solid #393838;
+
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    min-width: 50px;
+    
+    
+}
+
+
+nav .nav-bar .sidebarOpen{
+    color: #111010;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: orange;
+    text-decoration: none;
+}
+
+.logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 15px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    color: orange;
+    text-decoration: none;
+    padding:10px 10px 10px 0;
+    font-weight: 600;
+}
+.navLogo{
+    display: none;
+}
+.logoTelephone{
+    display: none;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #FFF;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+.animationcart{
+    
+}
+
+ .cartnav-collapsed {
+
+   margin-left: 100%;
+        width: 0%;
+        transition: all 0.6s ease;
+  }
+  :host .cartnav{
+   margin-left: 0px;
+    width: 100%;
+    transition: all 0.6s ;
+   
+  }
+  
+  .card1{
+    display: block;
+  }
+  .card2{
+display: none;
+}
+.cart2{
+    display: none;
+}
+
+@media screen and (max-width:860px) {
+    .sidenav-collapsed .nav-links{
+        margin-left: -110px;
+        width: 0%;
+       
+         }
+
+    nav .nav-bar{
+        justify-content: space-between;
+    }
+    .card2{
+        display: none;
+    }
+    .cart1{
+        display: none;
+    }*
+    .cart2{
+        display: flex;
+    }
+    .any{
+        display: none;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        display: none;
+    }
+    .logoTelephone{
+        display: block;
+    }
+
+    .logo-toggle{
+    display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgba(252, 250, 250, 0.8);
+        width: 75%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+       
+        
+    }
+    
+
+    .navLogo{
+        display: block;
+    }
+    .nav-bar .menu .nav-links .logo{
+       display: none;
+    }
+ 
+    .nav-links li a {
+        font-weight: bold;
+        color: #010718;
+       
+        
+    }
+    .nav-links li a:hover{
+        color: rgb(228, 209, 63);
+      
+    }
+
+    .nav-bar .nav-links li {
+        margin: 25px 0;
+        margin-left: -35%;
+        font-size: 1.2em;
+    }
+
+
+    
+}
+@media screen and (max-width:450px) {
+    .nav-bar .nav-links li {
+        margin: 25px 0;
+        margin-left: -30%;
+        font-size: 1.2em;
+    }
+
+}
+@media screen and (max-width:391px) {
+    .nav-bar .nav-links li {
+        margin: 25px 0;
+        margin-left: -20%;
+        font-size: 1.2em;
+    }
+  
+}
+@media screen and (max-width:281px) {
+    .nav-bar .nav-links li {
+        margin: 25px 0;
+        margin-left: 0%;
+        font-size: 1.2em;
+    }
+  
+}

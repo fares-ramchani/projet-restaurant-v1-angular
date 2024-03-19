@@ -1,0 +1,240 @@
+   .carousel-slide {
+       height: 23vh;
+       width: 100%;
+       object-fit: contain;
+       border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+   
+     }
+     .partier2{
+        display: flex;
+        justify-content: center;
+     }
+     .dimonsion-images{
+       width: 15px;
+      height: 15px;
+     }
+     .stars{
+       display: flex;
+       margin-top: 2%;
+        margin-left: 4%;
+     }
+     h5{
+       color:rgb(255, 187, 0);
+        text-align: center;
+       margin-top: 3%; 
+     }
+     .montant{
+       width: 90px;
+        height: 30px;
+         background-color: rgb(140, 83, 14);
+         margin-top: 2%;
+          margin-left: 4%;
+          border-radius: 10px;
+     }
+     .partier3{
+       display: flex;
+        justify-content: space-between;
+     }
+   .partier1{
+     display: flex; 
+     justify-content: space-between;
+      margin-top: 3%; 
+   }
+   .partier11{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%
+   }
+   .partier{
+     display: flex;
+     flex-direction: column;
+     height: 53vh;
+     width: 100%;
+     
+   }
+   h1{
+     font-size: 25px;
+     text-align: center;
+     font-weight: bold;
+     margin-top: 3%;
+   
+   }
+   .addcart{
+     display: flex;
+     border-radius: 10PX;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 3%;
+   }
+  
+   .btn-style:hover{
+     background-color: rgb(243, 185, 26);
+   }
+   .svgcard{
+     margin-left: 3%;
+   }
+   .patier111{
+     height: 100%; width: 100%;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+   p{
+     text-align: center;
+   }
+   .image-tpp{
+     width:300px;
+     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+   .coeur{
+     margin-top: 2%;
+     margin-right: 4%;
+   }
+   button:hover{
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+  
+   
+   /* @media screen and (max-width:1024px) {
+     .parent{
+       justify-content: start;
+       }
+     .patier111{
+       margin-left: 0%;
+       height: 38vh; 
+       width: 100%;
+     }
+     .parent1{
+       margin-left: 0%;
+       width: 70%;
+       
+     }
+     .image-tpp{
+       width:300px;
+     }
+     .partier11{
+     width: 100%;
+     }
+     .dd1{
+       object-fit: initial;
+     }
+     
+     }
+   
+      @media screen and (max-width:1024px) and (max-height:600px) {
+     .parent1{
+       width: 45%;
+       justify-content: center;
+     }
+      .patier111{
+       height: 60vh; 
+     }
+   .partier{
+     height: 60vh;
+   }
+   .carousel-slide{
+     height: 30vh;
+     
+   }
+   
+    
+   }   
+   
+    @media screen and (max-width:820px) {
+     .parent{
+       justify-content: start;
+       
+       }
+     .patier111{
+       height: 40vh; 
+       width: 100%;
+       margin-left: 0%;
+     }
+     .parent1{
+       margin-left: 0%;
+       width: 70%;
+     }
+     .image-tpp{
+       width:250px;
+     }
+     .dd1{
+       width: 100%; 
+     }
+     }
+     @media screen and (max-width:540px) {
+       .parent{
+         justify-content: start;
+         }
+       .patier111{
+         margin-left: 0%;
+         height: 43vh; 
+         width: 100%;
+       }
+       .parent1{
+         margin-left: 0%;
+         width: 50%;
+         
+       }
+       .image-tpp{
+         width:300px;
+       }
+       .partier11{
+       width: 105%;
+       }
+       .dd1{
+         object-fit: initial;
+       }
+       .stars{
+         margin-left: 6%;
+       }
+       
+       }
+   
+   @media screen and (max-width:450px) {
+     .parent{
+       flex-direction: column;
+     }
+     .image-tpp{
+       width:100%;
+     }
+     .dd1{
+       height:100%;
+     }
+     .parent1{
+      width: 97%;
+      margin-top: 0.5%;
+      margin-left: 1.5%;
+     }
+     .carousel-slide{
+       height: 33vh;
+       width: 50px;
+     }
+   
+     .partier11{
+       
+       width:100%
+     }
+     .patier111{
+       height: 100%; width: 90%;
+       border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+       margin-left: 5%;
+     }
+   
+   
+     h1{
+       margin-top:10%;
+     
+     }
+     p{
+       text-align: center;
+     }
+    
+    
+     
+   } 
+    */

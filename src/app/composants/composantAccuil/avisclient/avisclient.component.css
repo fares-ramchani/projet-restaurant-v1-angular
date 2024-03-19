@@ -1,0 +1,183 @@
+.body{
+    
+    background-image:url(../avisclient/images/back4.jpg) ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+.partier1{
+    width: 100%;
+    background: linear-gradient(to top,  rgba(238, 236, 236, 0.284), rgba(205, 141, 31, 0.656)); 
+  
+    
+}
+
+.partier11{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+p{
+width:500px;
+ font-style: oblique;
+ font-size: medium;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ text-align-last:auto;
+ color: aliceblue;
+ margin-top: 1.5%;
+}
+img{
+    margin-top: 30%;
+    height: 120px;
+    border-radius: 50%;
+}
+.image{
+    width: 8%;
+}
+.stars{
+    display: flex;
+    margin-top: -2%;
+     
+  }
+  .dimonsion-images{
+    width: 18px;
+   height: 18px;
+  }
+  h1{
+    color: aliceblue;
+    font-size: medium;
+    margin-top: 0.3%;
+  }
+
+  @media screen and (max-width:1024px) {
+    img{
+      height: 165px;
+  }
+  .image{
+      width:18%;
+  }
+  .partier11{
+    height: 39vh
+}
+      
+
+}
+@media screen and (max-width:1024px) and (max-height:768px) {
+    img{
+      height: 150px;
+      margin-top: 15%;
+  }
+  .image{
+      width:15%;
+  }
+  .partier11{
+    height: 88vh
+}
+      
+
+}
+
+@media screen and (max-width:820px) {
+    img{
+      margin-top: 15%;
+      height: 135px;
+  }
+  .image{
+      width:18%;
+  }
+  .partier11{
+    height: 39vh
+}
+      
+
+}
+
+
+@media screen and (max-width:540px) {
+    .dimonsion-images{
+      width: 14px;
+     height: 14px;
+    }
+    img{
+      margin-top: 12%;
+      height: 90px;
+      border-radius: 50%;
+  }
+  .image{
+      width:18%;
+  }
+  p{
+      width:50%;
+   font-size: 8px;
+      }
+      h1{
+          font-size: 20px;
+          margin-top: 1%;
+      }
+      
+.partier11{
+  height: 40vh;
+}
+.stars{
+    margin-top: 0.5%;
+     
+  }
+
+}
+@media screen and (max-width:450px) {
+    .dimonsion-images{
+      width: 14px;
+     height: 14px;
+    }
+    img{
+      margin-top: 12%;
+      height: 80px;
+      border-radius: 50%;
+  }
+  .image{
+      width:18%;
+  }
+  p{
+      width:50%;
+   font-size: 7px;
+      }
+      h1{
+          font-size: 20px;
+      }
+      
+.partier11{
+  height: 25vh;
+}
+}
+@media screen and (max-width:376px) {
+    .dimonsion-images{
+      width: 10px;
+     height: 10px;
+    }
+    img{
+      margin-top: 12%;
+      height: 40px;
+      border-radius: 50%;
+  }
+  .image{
+      width:12%;
+  }
+  p{
+      width:50%;
+   font-size: 5px;
+      }
+      h1{
+          font-size: 15px;
+      }
+      
+.partier11{
+  height: 22vh;
+}
+}

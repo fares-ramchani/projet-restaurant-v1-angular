@@ -1,0 +1,183 @@
+.partier1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.cap{
+   height: 90vh;
+     width:70%;
+}
+button{
+    width: 30%;
+    margin-left: 20%;
+    background-color: orange;
+    border-color: orange;
+}
+button:hover{
+    background:rgba(255, 166, 0, 0.812);
+    border-color: orange;
+}
+.partier11{
+    display: flex;
+    justify-content: space-around;
+    }
+  
+      
+
+.partier12{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 45%;
+}
+h2{
+    font-size: 30px;
+    color: rgb(181, 109, 20);
+    width: 70%;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    width: 70%;  
+    font-size: 17px;
+
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;  
+}
+.logoIcons{
+    width:10%;
+    height:70px;
+}
+
+@media screen and (max-width:1035px) {
+    .icons{
+        
+        justify-content: space-between; 
+        width: 100%;
+    }
+    .partier1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .partier12{
+        align-items: center;
+        
+    }
+    .cap{
+        width:90%;
+   }
+   h2{
+    
+    width: 144%;
+}
+p{
+    width: 144%;  
+   
+
+}
+
+button{
+    width: 70%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    margin-left: 0%;
+}
+   
+.cap{
+    height: 100%
+}
+  
+}
+@media screen and (max-width:922px) {
+.cap{
+    height: 100%
+}
+}
+@media screen and (max-width:746px) {
+
+  
+    .logoIcons{
+        width:35px;
+        height:55px;
+    }
+
+    
+  
+}
+@media screen and (max-width:652px) {
+
+    button{
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 10%;
+        margin-left: 0%;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    p{
+       
+        font-size: 12px;
+    }
+    .cap{
+        height: 40%;
+    }
+    
+  
+}
+@media screen and (max-width:398px) {
+
+    h2{
+        font-size: 17px;
+    }
+    p{
+       
+        font-size: 9px;
+    
+    }
+    .partier11{
+        width:100%;
+     }
+     .cap{
+          width:100%;
+     }
+    
+  
+}
+@media screen and (max-width:280px) {
+
+    h2{
+        font-size: 14px;
+    }
+    p{
+       
+        font-size: 9px;
+    
+    }
+    .partier11{
+        width:100%;
+     }
+     .cap{
+          width:100%;
+     }
+     .logoIcons{
+        width:25px;
+        height:45px;
+    }
+    
+    button{
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 10%;
+        margin-left: 0%;
+        font-size: 10px;
+    }
+  
+}

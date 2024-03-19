@@ -1,0 +1,147 @@
+<div id="container">
+    <div mat-dialog-actions style="width: 100%;display: flex;justify-content: end;">
+        <button mat-raised-buttom class="btn btn-close" (click)="closepopup()"></button>
+    </div>
+    <div>
+        <img [src]="inputData.Image" class="carousel-slide ">
+        
+    </div>
+    <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 2%;">
+        <h3>{{ inputData.name }}</h3>
+        <small *ngIf="error" style="background-color: red;color: white; position: fixed; margin-top: 3%; border-radius: 10px;">
+            {{errerMessage()}} </small>
+    </div>
+    <div class="contunu1">
+        <div style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="card1">
+                <h3>SIZE <span style="font-size: 16px;">(Required)</span></h3>
+                <button  (click)="selectSeul()" [class]="actios == 'seul' ? 'btn style1' : 'btn style2'">
+                    <h6>seul</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </button>
+                <button [disabled]="action1" (click)="selectEnMenu()" [class]="actios == 'menu' ? 'btn style1' : 'btn style2'">
+                    <h6>en menu </h6>
+                    <h6 id="h6">2.50</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%;">
+            <div class="card1">
+                <h3>La Sauce <span style="font-size: 16px;">(Required)</span></h3>
+                <div *ngFor="let sauce of sauces" (click)=" selectsauce(sauce)"
+                    [class]="sauce.cheked == true ? 'btn style1' : 'btn style2'">
+                    <h6>{{sauce.name}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%;">
+            <div class="card1">
+                <h3>Les Crudités</h3>
+                <div *ngFor="let Crudite of Crudites" (click)=" selecCrudites(Crudite)"
+                    [class]="Crudite.cheked == true ? 'btn style1' : 'btn style2'">
+                    <h6>{{Crudite.name}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+
+
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%;">
+            <div class="card1">
+                <h3>Les Suppléments</h3>
+                <div *ngFor="let Supplement of Supplements" (click)=" selecSupplements(Supplement)"
+                    [class]="Supplement.cheked == true ? 'btn style1' : 'btn style2'">
+                    <h6>{{Supplement.name}}</h6>
+                    <h6 id="h6">{{Supplement.montant}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+
+
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%;">
+            <div class="card1">
+                <h3>Avec Dessert</h3>
+                <div *ngFor="let Desser of Dessert" (click)=" selecDessert(Desser)"
+                    [class]="Desser.cheked == true ? 'btn style1' : 'btn style2'">
+                    <h6>{{Desser.name}}</h6>
+                    <h6 id="h6">{{Desser.montant}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%;">
+            <div class="card1">
+                <h3>Special Instructions</h3>
+
+                <textarea name="" id="" cols="30" rows="10" style="height: 50px; width: 100%;"
+                    placeholder="Example: No pepper / sugar / salt please."></textarea>
+            </div>
+        </div>
+        <div
+            style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; margin-top: 3%; ">
+            <div class="card12">
+                <h3>Quantity</h3>
+                <div class="card122">
+                    <input type="text" [placeholder]="Quantity" style="width: 80%;">
+                    <div style="display: flex; justify-content: space-between; width: 19%;">
+                        <div class="btn btn-danger" (click)="plusQuantiter(inputData)"
+                            style="background-color: rgba(0, 0, 0, 0.499); border-color:rgba(0, 0, 0, 0.499) ;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0" />
+                            </svg></div>
+                        <div class="btn btn-danger" (click)="moinQuantiter(inputData)"
+                            style="background-color: rgba(0, 0, 0, 0.499); border-color:rgba(0, 0, 0, 0.499) ;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z" />
+                        </svg></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 35px;">
+        
+        <button (click)="addcart(errerMessage())" id="button" class="btn btn-danger" style="min-width: 250px; "> <h5>{{montantTotal+montantDessert+montantSupplements| number: '1.1-2'}}</h5><h5 style="margin-right: 10%;">ADD TO CART</h5></button>
+ 
+    </div>
+
+</div>

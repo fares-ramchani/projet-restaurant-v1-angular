@@ -1,0 +1,167 @@
+.partier {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.background {
+    background-color: rgba(249, 159, 49, 0.314);
+    border-radius: 80px;
+    width: 80%;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ;
+
+}
+
+.imagebinvenue {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+img {
+    width: 100%;
+    height: 60vh;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width:1106px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    img {
+        height: 35vh;
+    }
+
+}
+
+@media screen and (max-width:922px) {
+    h1 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+img{
+    height: 35vh;
+}
+
+
+}
+
+@media screen and (max-width:774px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 9px;
+    }
+
+
+
+}
+
+@media screen and (max-width:664px) {
+    .partier {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagebinvenue {
+        width: 100%;
+
+    }
+
+    img {
+        height: 200px;
+
+    }
+
+    .description {
+        width: 100%;
+
+    }
+
+    p {
+        margin-top: 2%;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+
+    p {
+
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* @media screen and (max-width:406px) {
+
+    p{
+       
+        font-size:18px;
+    }
+    h1{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:333px) {
+
+    p{
+       
+        font-size:8px;
+    }
+    h1{
+        font-size: 14px;
+    }
+} */

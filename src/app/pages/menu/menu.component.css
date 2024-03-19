@@ -1,0 +1,15 @@
+
+.menubar{
+    display: flex; margin-top: 70px;
+}
+.contunu{
+    margin-top: 10px; height:88vh; overflow-y: auto; overflow-x: hidden;
+}
+@media screen and (max-width:1024px) {
+    .menubar{
+        display: flex;  flex-direction: column;
+        margin-top: 85px
+    }
+   
+  
+}

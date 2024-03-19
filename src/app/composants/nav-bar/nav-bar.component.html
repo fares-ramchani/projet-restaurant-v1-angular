@@ -1,0 +1,56 @@
+
+<body>
+ 
+  <nav [ngClass]="!collapsed ? 'sidenav-collapsed':''" >
+      <div class="nav-bar">
+          <ul class="nav-links">
+            <li><a routerLink="" routerLinkActive="active">HOME</a></li>
+            <li><a routerLink="/Menu/Burgers" routerLinkActive="active">MENU</a></li>
+            <li><a routerLink="/registration" routerLinkActive="active">SHOP</a></li>
+            <li class="logo"><a href="#"><img src="assets/images/logo.png" width="50" ></a></li>
+            <li><a routerLink="/home" routerLinkActive="active">BLOG</a></li>
+            <li><a routerLink="/Homeprofissionnel" routerLinkActive="active" >HOURS&LOCATIONS</a></li> 
+            <li class="card1"><a><button  (click)="opencart()" style="border: 0; background-color: transparent;"><svg style="color: orange;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg></button></a></li> 
+            <li style="margin-left: -3%; margin-top: -1%; border-radius: 50%; background-color: black; color: white; width: 18px; height: 19px; text-align: center; font-weight: bold;"  >{{count}}</li>
+            <app-cart  class="cart1" [ngClass]="showpopub ? 'cartnav-collapsed':'cartnav host'"  ></app-cart>
+        </ul> 
+             
+              <div class="card2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                </svg>
+              </div>
+              <div class="logoTelephone">
+                <button (click)="opencart()" class="btn btn-danger" style="width: 35px;height: 40px; background-color: transparent ;border: 0;">
+                  <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                  </svg>
+                </button>
+                
+              </div>
+          <div class="navLogo"><a href="#">
+            <img src="assets/images/logo.png" width="50" ></a>
+          </div>
+          <div class="logo-toggle">
+            <button class="btn btn-danger " style="background-color: orange;border: 1; border-color: orange;" *ngIf="!collapsed" (click)="togglecollase()">
+              <svg style="color:white;" xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+            <button class="btn btn-danger " *ngIf="collapsed" (click)="closeSidenav()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+           
+          </div>
+         
+      </div>
+      <app-cart class="cart2" [ngClass]="showpopub ? 'cartnav-collapsed':'cartnav'"  ></app-cart>
+     
+  </nav>
+
+
+</body>
